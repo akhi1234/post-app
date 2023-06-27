@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type='text'],
+select {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+  outline: none;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pagination {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination li {
+  margin-right: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.pagination button {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+}
+
+.pagination button:hover {
+  background-color: #ccc;
+}
+
+.pagination .active button {
+  background-color: #333;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  input[type='text'],
+  select {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.875rem;
   }
 }
